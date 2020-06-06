@@ -11,7 +11,7 @@
     //salvar dados no banco
     $nome = $_POST['nome'];
     $email = $_POST['email'];
-    $senha = $_POST['senha'];
+    $senha = md5($_POST['senha']);
 
     $query = "INSERT INTO usuario(nome, email, senha) VALUES ('$nome', '$email', '$senha')";
 
