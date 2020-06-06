@@ -8,12 +8,7 @@
     <body>
         <div class="formularios">
 
-            <h2>Preencha os seus dados</h2>
-            <form action="../controller/database-cadastro.php"  method="POST">
-                <div class="formgroup">
-                    <label for="nome">Nome Completo:</label>
-                    <input type="text" name="nome" class="form-control">
-                </div>
+            <form action="../controller/database-login.php"  method="POST">
 
                 <div class="formgroup">
                     <label for="email">Endereço de e-mail:</label>
@@ -21,14 +16,14 @@
                 </div>
 
                 <div class="formgroup">
-                    <label for="senha">Defina uma senha:</label>
+                    <label for="senha">Senha:</label>
                     <input type="password" name="senha" class="form-control">   
                 </div>
 
                 <button type="submit" class="btn btn-primary">Cadastrar</button>
             </form>
-            
 
-        </div>
+
+    </div>
     </body>
 </html>

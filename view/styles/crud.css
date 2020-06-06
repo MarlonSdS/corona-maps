@@ -1,4 +1,9 @@
+body{
+    border: 1px solid transparent;
+}
+
 .formularios{
     width: 30%;
+    height: 50%;
     margin: auto;
 }
