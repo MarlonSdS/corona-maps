@@ -11,10 +11,17 @@
     //
 
     //pegando os dados informados pelo usuário e os dados do banco
-    $email = $_POST['email'];
-    $senha = $_POST['senha'];
+    if(isset($_POST['entrar'])){
+        $email = $_POST["email"];
+        $senha = md5($_POST["senha"]);
+        header('location: ../view/login.php');
+        validar();
+    }
 
-    $autent = false;
+
+    //
+
+    $autent = true;
 
     function validar(){
         global $conexao;
@@ -27,17 +34,17 @@
         while($row = $validar->fetch_assoc()){
             if($row['senha'] == $senha){
                 $autent = true;
+                header('location: ../view/infos.php');
+                echo "aaa";
             }else{
                 $autent = false;
+               
             }
+            
         }
     }
 
-    validar();
-
-   // if(validar()->$autent == false){
-        //header('location: ../view/login.php');
-   // }
-   // header('location: ../view/login.php');
+    
+    
 
 ?>

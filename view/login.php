@@ -7,7 +7,7 @@
     </head>
     <body>
         <?php
-        //require_once('../controller/database-login.php');
+        require_once('../controller/database-login.php');
         ?>
         <div class="formularios">
 
@@ -23,16 +23,15 @@
                     <input type="password" name="senha" class="form-control">   
                 </div>
 
-                <button type="submit" class="btn btn-primary">Entrar</button>
+                <button type="submit" class="btn btn-primary" name="entrar">Entrar</button>
             </form>
 
 
     </div>
         <?php
-            require_once('../controller/database-login.php');
-            if(validar()->$autent == false){
-                echo "dados incorretos";
-            }
+           if($autent == false){
+               echo "dados incorretos";
+           }
         ?>
 
     </body>
