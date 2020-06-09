@@ -6,6 +6,9 @@
         ?>
     </head>
     <body>
+        <?php
+        //require_once('../controller/database-login.php');
+        ?>
         <div class="formularios">
 
             <form action="../controller/database-login.php"  method="POST">
@@ -20,10 +23,17 @@
                     <input type="password" name="senha" class="form-control">   
                 </div>
 
-                <button type="submit" class="btn btn-primary">Cadastrar</button>
+                <button type="submit" class="btn btn-primary">Entrar</button>
             </form>
 
 
     </div>
+        <?php
+            require_once('../controller/database-login.php');
+            if(validar()->$autent == false){
+                echo "dados incorretos";
+            }
+        ?>
+
     </body>
 </html>

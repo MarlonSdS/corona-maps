@@ -6,7 +6,7 @@
     $usuario = "root";
     $password = "";
     
-    $conexao = mysqli_connect($servidor, $usuario, $password, $banco)or  die("Conexão falhou!". mysqli_connect_errno);
+    $conexao = mysqli_connect($servidor, $usuario, $password, $banco)or  die("Conexão falhou!". mysqli_connect_error);
 
     //salvar dados no banco
     $nome = $_POST['nome'];

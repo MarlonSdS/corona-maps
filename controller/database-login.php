@@ -6,29 +6,38 @@
      $usuario = "root";
     $password = "";
         
-    $conexao = mysqli_connect($servidor, $usuario, $password, $banco)or  die("Conexão falhou!". mysqli_connect_errno);
+    $conexao = mysqli_connect($servidor, $usuario, $password, $banco)or  die("Conexão falhou!". mysqli_connect_error);
+
+    //
 
     //pegando os dados informados pelo usuário e os dados do banco
     $email = $_POST['email'];
-    $senha = md5($_POST['senha']);
+    $senha = $_POST['senha'];
 
-    $query = "SELECT senha FROM usuario WHERE email = $email";
-    $operacao = mysqli_query($conexao, $query);
-    $linha = mysqli_fetch_assoc($operacao);
-    $total = mysqli_num_rows($operacao);
+    $autent = false;
 
-    //validando o usuário
-    $senhaDB = "";
-    if($total > 0) {
-        do {
-            $senhaDB = $linha['senha'];
-        }while($linha = mysqli_fetch_assoc($operacao));
+    function validar(){
+        global $conexao;
+        global $email;
+        global $senha;
+        global $autent;
+
+        $validar = $conexao->query("SELECT senha FROM usuario WHERE email = '$email'") or die($conexao->error);
+
+        while($row = $validar->fetch_assoc()){
+            if($row['senha'] == $senha){
+                $autent = true;
+            }else{
+                $autent = false;
+            }
+        }
     }
 
-    if($senhaDB == $senha){
-        echo "sucesso";
-    }else{
-        echo "falha";
-    }
+    validar();
+
+   // if(validar()->$autent == false){
+        //header('location: ../view/login.php');
+   // }
+   // header('location: ../view/login.php');
 
 ?>
