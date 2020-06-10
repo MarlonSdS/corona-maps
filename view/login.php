@@ -9,7 +9,9 @@
         <?php
         require_once('../controller/database-login.php');
         ?>
-        <div class="formularios">
+        <div class="lateral-esquerda"></div>
+        <div clas="lateral-direita">
+            <div class="formularios">
 
             <form action="../controller/database-login.php"  method="POST">
 
@@ -27,7 +29,9 @@
             </form>
 
 
-    </div>
+        </div>
+        </div>
+    
         <?php
            if($autent == false){
                echo "dados incorretos";
