@@ -9,7 +9,27 @@ body{
     margin-left: 52.5%;
 }
 form{
-
+    margin: 40% 0 30% 0;
     
 }
 
+.btn{
+    margin-top: 10px;
+}
+
+.lateral-esquerda{
+    display: inline;
+    background-color: #138f73ff;
+    width: 50%;
+    height: 657px;
+    float: left;
+    text-align: center;
+}
+
+.lateral-esquerda h1{
+    color: white;
+    text-align: center;
+    display: inline-block;
+    background-color: #138f73ff;
+    margin-top: 45%;
+}

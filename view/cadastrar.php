@@ -6,6 +6,7 @@
         ?>
     </head>
     <body>
+    <session class="lateral-esquerda"><h1> Cadastre-se para poder contribuir </h1></session>
         <div class="formularios">
 
             <h2>Preencha os seus dados</h2>

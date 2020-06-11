@@ -9,7 +9,7 @@
         <?php
         require_once('../controller/database-login.php');
         ?>
-        <div class="lateral-esquerda"></div>
+        <session class="lateral-esquerda"><h1> Entre para poder contrbuir </h1></session>
         <div clas="lateral-direita">
             <div class="formularios">
 
@@ -26,7 +26,7 @@
                 </div>
 
                 <button type="submit" class="btn btn-primary" name="entrar">Entrar</button>
-                <a href="cadastrar.php" class="btn btn-info">Cadastrar</a>
+                <a href="cadastrar.php" class="btn btn-success">Cadastrar</a>
             </form>
             
 
