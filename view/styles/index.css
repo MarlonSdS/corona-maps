@@ -106,9 +106,9 @@ input[type="checkbox"] {
 
 nav {
     background-color: #138f73ff;
-    width: 250px;
-    height: 143.9px;
-    left: -250px;
+    width: 20%;
+    height: 30%;
+    left: -265px;
     position: absolute;
     transition: all .5s;
     top: 8%;

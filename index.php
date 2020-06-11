@@ -9,7 +9,25 @@
 <body>
 
 
-    <header></header>
+    <header>   
+    
+    </header>
+
+     <!-- Menu -->
+     <div class="Menu">
+            <input type="checkbox" id="chec">
+            <label for="chec">
+                <img src="view/imagens/menu.png">
+            </label>
+
+            <nav>
+                <ul>
+                    <li><b><a href="index.html">Inicio</a></b></li>
+                    <li><b><a href="">Regional</a></b></li>
+                    <li><b><a href="view/login.php">Entrar</a></b></li>
+                </ul>
+            </nav>
+        </div>
 
     <!-- Integra SUS -->
     <div class="sus">
@@ -35,20 +53,7 @@
 
     <h2> <b>ATENDIMENTO ONLINE</b></h2>
 
-    <!-- Menu -->
-    <div class="Menu">
-        <input type="checkbox" id="chec">
-        <label for="chec">
-            <img src="view/imagens/menu.png">
-        </label>
 
-        <nav>
-            <ul>
-                <li><b><a href="index.html">Inicio</a></b></li>
-                <li><b><a href="">Regional</a></b></li>
-            </ul>
-        </nav>
-    </div>
 
     <!-- Mapa -->
     <div id="map"></div>

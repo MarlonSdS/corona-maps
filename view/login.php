@@ -26,8 +26,9 @@
                 </div>
 
                 <button type="submit" class="btn btn-primary" name="entrar">Entrar</button>
+                <a href="cadastrar.php" class="btn btn-info">Cadastrar</a>
             </form>
-
+            
 
         </div>
         </div>
