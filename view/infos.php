@@ -28,9 +28,23 @@
         </header>
 
         <main>
-            <form action="">
-                <input type="">
-            </form>
+            <div class="card">
+                <p class="label">Como está o nível de isolamento</p>
+                <p class="nivel"></p>
+                <a href="login.php" class="btn btn-success">Contribuir</a>
+            </div>
+            <div class="card">
+                <p class="label">Quão fácil é se isolar</p>
+                <p class="nivel"></p>
+                <a href="login.php" class="btn btn-success">Contribuir</a>
+            </div>
+            <div class="card">
+                <p class="label">Facilidade de solicitar serviços sem sair de casa</p>
+                <p class="nivel"></p>
+                <a href="login.php" class="btn btn-success">Contribuir</a>
+            </div>
+            <div class="btn-contribuir"><a href="login.php" class="btn btn-info">Quero com minhas informações</a></div>
+            
         </main>
 
         <footer></footer>

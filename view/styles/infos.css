@@ -73,3 +73,30 @@ footer{
     height: 28%;
     margin-top: 850px;
 }
+
+/*main*/
+main{
+    width: 60%;
+    margin: auto;
+}
+
+.card .btn{
+    width: 30%;
+
+}
+
+.card{
+    height: 20%;
+    text-align: center;
+    padding: 2%;
+    margin-top: 5%;
+}
+
+.btn-contribuir{
+    padding: 2% 5% 2% 11%;
+}
+
+.btn-contribuir .btn{
+    width: 90%;
+    margin: auto;
+}
