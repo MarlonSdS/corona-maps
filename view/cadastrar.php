@@ -10,7 +10,7 @@
         <div class="formularios">
 
             <h2>Preencha os seus dados</h2>
-            <form action="../controller/database-cadastro.php"  method="POST">
+            <form action="../controller/usuarioDAO.php"  method="POST">
                 <div class="formgroup">
                     <label for="nome">Nome Completo:</label>
                     <input type="text" name="nome" class="form-control">
@@ -26,7 +26,7 @@
                     <input type="password" name="senha" class="form-control">   
                 </div>
 
-                <button type="submit" class="btn btn-primary">Cadastrar</button>
+                <button type="submit" class="btn btn-primary" name="cadastro">Cadastrar</button>
             </form>
             
 

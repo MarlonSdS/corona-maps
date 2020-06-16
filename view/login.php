@@ -7,7 +7,7 @@
     </head>
     <body>
         <?php
-        require_once('../controller/database-login.php');
+        require_once('../controller/usuarioDAO.php');
         ?>
         <session class="lateral-esquerda"><h1> Entre para poder contrbuir </h1></session>
         <div clas="lateral-direita">
@@ -32,12 +32,6 @@
 
         </div>
         </div>
-    
-        <?php
-           if($autent == false){
-               echo "dados incorretos";
-           }
-        ?>
 
     </body>
 </html>
