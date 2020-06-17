@@ -1,3 +1,10 @@
+<?php
+    Session_start();
+    if(!isset($_SESSION['idUsuario']) or !isset($_SESSION['nome'])){
+        header("location: /corona-maps/view/login.php");
+        exit;
+    }
+?>
 <!Doctype html>
 <html lang="pt-br">
 
@@ -20,8 +27,9 @@
                 <nav>
                     <ul>
                         <li><b><a href="../index.html">Inicio</a></b></li>
-                        <li><b><a href="infos,php">Regional</a></b></li>
-                        <li><b><a href="/login.php">Entrar</a></b></li>
+                        <li><b><a href="infos.php">Regional</a></b></li>
+                        <li><b><a href="login.php">Entrar</a></b></li>
+                        <li><b><a href="../controller/sair.php">Sair</a></b></li>
                     </ul>
                 </nav>
             </div>

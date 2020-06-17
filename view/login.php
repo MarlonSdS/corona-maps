@@ -13,7 +13,7 @@
         <div clas="lateral-direita">
             <div class="formularios">
 
-            <form action="../controller/database-login.php"  method="POST">
+            <form action="../controller/usuarioDAO.php"  method="POST">
 
                 <div class="formgroup">
                     <label for="email">Endereço de e-mail:</label>
