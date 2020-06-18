@@ -84,26 +84,18 @@
 
             addMarca({
                 coords: {
-                    lat: -5.894116,
-                    lng: -38.623537
+                    lat: -5.895499, 
+                    lng: -38.623067
                 },
-                content: '<h3>Queiroz</h3>'
-            });
+                content: '<b><h3>Polícia Militar</h3></b>'
+            }); 
 
             addMarca({
                 coords: {
-                    lat: -5.894586,
-                    lng: -38.622207
+                    lat: -5.882458, 
+                    lng: -38.617713
                 },
-                content: '<h3>Fórum</h3>'
-            });
-
-            addMarca({
-                coords: {
-                    lat: -5.904624,
-                    lng: -38.624227
-                },
-                content: '<h3>Posto Petobras</h3>'
+                content: '<b><h3>Hospital Municipal</h3><br>Horário de Funcionamento<br>Atendimento 24:00 Horas<br></b>'
             });
 
             addMarca({
@@ -111,23 +103,15 @@
                     lat: -5.903770,
                     lng: -38.622950
                 },
-                content: '<h3>Posto São Luiz</h3>'
+                content: '<b><h3>Posto São Luiz</h3><br>Horário de Funcionamento<br>De 05:00 às 22:00 Horas<br>Fone: (88) 3522-2366</b>'
             });
 
             addMarca({
                 coords: {
-                    lat: -5.902105,
-                    lng: -38.624473
+                    lat: -5.902542,
+                    lng: -38.627272
                 },
-                content: '<h3>RT Petróleo</h3>'
-            });
-
-            addMarca({
-                coords: {
-                    lat: -5.904490,
-                    lng: -38.624428
-                },
-                content: '<h3>BR Auto Posto Rio Grandense</h3>'
+                content: '<b><h3>UPA - Unidade de Pronto Atendimento</h3><br>Horário de Funcionamento<br>Atendimento 24 Horas<br>Fone: (88) 3522-2746</b>'
             });
 
             addMarca({
@@ -135,8 +119,7 @@
                     lat: -5.903300,
                     lng: -38.623822
                 },
-                content: '<h3>Restaurante do Galego</h3>',
-
+                content: '<b><h3>Restaurante do Galego</h3><br>Horário de Funcionamento<br>De 06:00 às 12:00 Horas<br></b>',
             });
 
             addMarca({
@@ -144,19 +127,57 @@
                     lat: -5.903217,
                     lng: -38.622340
                 },
-                content: '<b><h3>Churrascaria Ubiratan</h3><br>Horário de Funcionamento<br>De 06:00 às 20:00 Horas<br>Fone: (88) 9999-9999</b>',
-
-
+                content: '<b><h3>Churrascaria Ubiratan</h3><br>Fone: (83) 3531-2736 <br></b>',
             });
 
             //Cajazeiras
 
             addMarca({
                 coords: {
-                    lat: -6.890288,
-                    lng: -38.556037
+                    lat: -6.883763, 
+                    lng: -38.553551
                 },
-                content: '<h3>Posto Petobras</h3>'
+                content: '<b><h3>UPA - Unidade de Pronto Atendimento</h3><br>Horário de Funcionamento<br>Atendimento 2400 Horas<br></b>'
+            });
+
+            addMarca({
+                coords: {
+                    lat: -6.893001, 
+                    lng: -38.565916
+                },
+                content: '<b><h3>Farmácia Santa Maria Eireli</h3><br>Fone: (83) 3531-3848 <br></b>'
+            });
+
+            addMarca({
+                coords: {
+                    lat: -6.892233, 
+                    lng: -38.559264
+                },
+                content: '<b><h3>Supermercado Brasil</h3><br>Horário de Funcionamento<br>De 08:00 às 20:00 Horas<br>Fone: (83) 3531-2455</b>'
+            });
+
+            addMarca({
+                coords: {
+                    lat: -6.892233, 
+                    lng: -38.559264
+                },
+                content: '<b><h3>Polisaude</h3><br>Horário de Funcionamento<br>De 07:00 às 18:00 Horas<br>Fone: (83) 3531-1938<br>Site: polisaude.com.br </b>'
+            });
+
+            addMarca({
+                coords: {
+                    lat: -6.892233, 
+                    lng: -38.559264
+                },
+                content: '<b><h3>Posto Petobras</h3><br>Fone: (83) 3531-4318<br></b>'
+            });
+            
+            addMarca({
+                coords: {
+                    lat: -6.888195, 
+                    lng: -38.558242
+                },
+                content: '<b><h3>Caixa Econômica Federal</h3><br>Horário de Funcionamento<br>De 09:00 às 15:00 Horas<br>Fone: (83) 3531-4380</b>'
             });
 
             //Adicionar Marcas
