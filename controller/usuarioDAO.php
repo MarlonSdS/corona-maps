@@ -27,7 +27,12 @@
             session_start();
             $_SESSION['idUsuario'] = $validar['idUsuario'];
             $_SESSION['nome'] = $validar['nome'];
-            header("location: /corona-maps/view/infos.php");
+            if($email == "admin@admin"){
+                header("location: /corona-maps/view/admin.php");
+            }else{
+                header("location: /corona-maps/view/infos.php");
+            }
+            
         }else{
             header("location: /corona-maps/view/login.php");
         }
