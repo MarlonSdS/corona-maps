@@ -17,7 +17,15 @@
     <body>
     <?php require_once('../controller/usuarioDAO.php'); ?>
         <div class="container">
-            <form action="corona-maps/controller/usuarioDAO.php" method="POST">
+        <?php if (isset($_SESSION['mensagem'])) : ?>
+            <div class="alert alert-<?php echo $_SESSION['tipo_msg']?>">
+                <?php 
+                    echo $_SESSION['mensagem']; 
+                    unset($_SESSION['mensagem']);
+                ?>
+            </div>
+        <?php endif; ?>
+            <form action="../controller/usuarioDAO.php" method="POST">
                 <input type="hidden" name="id" value="<?php echo $id; ?>">
                 <div class="formgroup">
                     <label for="nome">Nome Completo</label>
@@ -32,7 +40,11 @@
                     <input type="password" name="senha" class="form-control" value="<?php echo $senha; ?>">
                 </div>
 
-                <button type="submit" class="btn btn-success">Cadastrar</button>
+                <?php if ($id != "") : ?>
+                        <button type="submit" class="btn btn-info" name="editar">Atualizar</button>
+                <?php else : ?>
+                        <button type="submit" class="btn btn-primary" name="cadastrar">Cadastrar</button>
+                <?php endif; ?>
             </form>
         </div>
         <?php

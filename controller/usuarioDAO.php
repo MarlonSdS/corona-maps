@@ -21,6 +21,23 @@
         header("location: /corona-maps/view/login.php");
     }
 
+    //cadastro vindo da página admin
+    if(isset($_POST['cadastrar'])){
+        $nome = $_POST['nome'];
+        $email = $_POST['email'];
+        $senha = md5($_POST['senha']);
+    
+        $query = "INSERT INTO usuario(nome, email, senha) VALUES ('$nome', '$email', '$senha')";
+    
+        $operacao = mysqli_query($conexao, $query);
+        if(!isset($_SESSION)){
+            session_start();
+        }
+        $_SESSION['mensagem'] = "Usuário cadastrado com sucesso!";
+        $_SESSION['tipo_msg'] = "success";
+        header("location: /corona-maps/view/admin.php");
+    }
+
     //autenticar usuário
     if(isset($_POST['entrar'])){
         $email = $_POST['email'];
@@ -41,6 +58,11 @@
             }
             
         }else{
+            if(!isset($_SESSION)){
+                session_start();
+            }
+            $_SESSION['mensagem'] = "Dados incorretos";
+            $_SESSION['tipo_msg'] = "danger";
             header("location: /corona-maps/view/login.php");
         }
     }
@@ -50,7 +72,7 @@
 
         $listarUsuarios = $conexao->query("SELECT * FROM usuario") or die ($conexao->error);
     }
-
+    //excluir usuário
     if(isset($_GET['excluir'])){
         $id = $_GET['excluir'];
     
@@ -60,11 +82,11 @@
             session_start();
         }
         $_SESSION['mensagem'] = "Usuário excluído com sucesso!";
-        $_SESSION['tipo_msg'] = "danger";
+        $_SESSION['tipo_msg'] = "warning";
     
         header("location: ../view/admin.php");
     }
-    
+    //carregar dados do usuário nos campos
     if(isset($_GET['consultar'])){
         $id = $_GET['consultar'];
     
@@ -77,6 +99,25 @@
             $email = $usuario['email'];
             $senha = $usuario['senha'];
         }
+    }
+
+    //atualizar usuário
+    if(isset($_POST['editar'])){
+        $id = $_POST['id'];
+        $nome = $_POST['nome'];
+        $email = $_POST['email'];
+        $senha = md5($_POST['senha']);
+
+        $conexao->query("UPDATE usuario SET nome='$nome', email='$email', senha='$senha' WHERE idUsuario='$id'")
+        or die($conexao->error);
+
+        if(!isset($_SESSION)){
+            session_start();
+        }
+        $_SESSION['mensagem'] = "Usuário atualizado com sucesso!";
+        $_SESSION['tipo_msg'] = "info";
+
+        header("location: ../view/admin.php");
     }
 
     

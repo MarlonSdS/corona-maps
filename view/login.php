@@ -11,8 +11,19 @@
         ?>
         <session class="lateral-esquerda"><h1> Entre para poder contrbuir </h1></session>
         <div clas="lateral-direita">
+        
             <div class="formularios">
 
+            <?php
+        session_start();
+        if (isset($_SESSION['mensagem'])) : ?>
+            <div class="alert alert-<?php echo $_SESSION['tipo_msg']?>">
+                <?php 
+                    echo $_SESSION['mensagem']; 
+                    unset($_SESSION['mensagem']);
+                ?>
+            </div>
+        <?php endif; ?>
             <form action="../controller/usuarioDAO.php"  method="POST">
 
                 <div class="formgroup">
