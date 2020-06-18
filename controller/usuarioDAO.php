@@ -2,6 +2,13 @@
 
     include("../controller/conexao.php");
 
+    $listarUsuarios;
+
+    $id ="";
+    $nome ="";
+    $email ="";
+    $senha ="";
+
     //cadastrar usuário no banco
     if(isset($_POST['cadastro'])){
         $nome = $_POST['nome'];
@@ -35,6 +42,40 @@
             
         }else{
             header("location: /corona-maps/view/login.php");
+        }
+    }
+
+    function listarUsuarios(){
+        global $conexao, $listarUsuarios;
+
+        $listarUsuarios = $conexao->query("SELECT * FROM usuario") or die ($conexao->error);
+    }
+
+    if(isset($_GET['excluir'])){
+        $id = $_GET['excluir'];
+    
+        $conexao->query("DELETE FROM usuario WHERE idUsuario='$id'") or die ($conexao->error);
+    
+        if(!isset($_SESSION)){
+            session_start();
+        }
+        $_SESSION['mensagem'] = "Usuário excluído com sucesso!";
+        $_SESSION['tipo_msg'] = "danger";
+    
+        header("location: ../view/admin.php");
+    }
+    
+    if(isset($_GET['consultar'])){
+        $id = $_GET['consultar'];
+    
+        $usuario = $conexao->query("SELECT * FROM usuario WHERE idUsuario='$id'") or die ($conexao->error);
+    
+        if($usuario->num_rows == 1){
+            $usuario = $usuario->fetch_array();
+            $id = $usuario['idUsuario'];
+            $nome = $usuario['nome'];
+            $email = $usuario['email'];
+            $senha = $usuario['senha'];
         }
     }
 

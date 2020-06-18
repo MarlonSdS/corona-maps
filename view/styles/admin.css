@@ -12,10 +12,13 @@ label{
 }
 
 .table{
-    width:70% !important;
+    width:80% !important;
     margin: auto;
 }
 
 .thead-light{
+    text-align: center;
+}
+td{
     text-align: center;
 }
