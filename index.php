@@ -22,7 +22,7 @@
         <nav>
             <ul>
                 <li><b><a href="index.html">Inicio</a></b></li>
-                <li><b><a href="">Regional</a></b></li>
+                <li><b><a href="view/infos.php">Regional</a></b></li>
                 <li><b><a href="view/login.php">Entrar</a></b></li>
             </ul>
         </nav>

@@ -39,19 +39,25 @@
             <div class="card">
                 <p class="label">Como está o nível de isolamento</p>
                 <p class="nivel"></p>
+                <?php if(isset($_SESSION['contribuir'])): ?>
+                <input type="text" class="form-control" name="cont1">
                 <a href="login.php" class="btn btn-success">Contribuir</a>
+                <?php else: ?>
+                <a href=""></a>
+                <?php endif; ?>
             </div>
             <div class="card">
                 <p class="label">Quão fácil é se isolar</p>
                 <p class="nivel"></p>
-                <a href="login.php" class="btn btn-success">Contribuir</a>
+                <a name="contribuir" href="login.php" class="btn btn-success">Contribuir</a>
             </div>
             <div class="card">
                 <p class="label">Facilidade de solicitar serviços sem sair de casa</p>
                 <p class="nivel"></p>
                 <a href="login.php" class="btn btn-success">Contribuir</a>
             </div>
-            <div class="btn-contribuir"><a href="login.php" class="btn btn-info">Quero com minhas informações</a></div>
+            <div class="btn-contribuir"><a href="../controller/back.php?contribuir=<?php echo "true"; ?> 
+            " class="btn btn-info">Quero com minhas informações</a></div>
             
         </main>
 
