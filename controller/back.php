@@ -1,7 +1,8 @@
 <?php
 include("../controller/conexao.php");
 
-$contribuir ="";
+$contribuir ="false";
+$enviar = "false";
 
 $nIsolamento="";
 $fIsolar="";
@@ -24,7 +25,9 @@ $fIsolar = $_POST['cont2'];
 $sServicos = $_POST['cont3'];
 $id = $_POST['id'];
 
-if($nIsolamento or $fIsolar or $sServicos != ""){
+$enviar = $_GET['enviar'];
+
+if($enviar == "true"){
     $query = "INSERT INTO ifos(nivelIsolamento, facilIsolar, solicitarServicos, idUsuario) 
     VALUES ('$nIsolamento', '$fIsolar', '$sServicos', '$id')";
 
