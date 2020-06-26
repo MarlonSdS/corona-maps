@@ -17,6 +17,7 @@
         <link rel="stylesheet" href="../view/styles/infos.css">
     </head>
     <body>
+        <?php require_once('../controller/back.php'); ?>
         <header>
             <h1> </h1>
                     <!-- Menu -->
@@ -25,25 +26,26 @@
         <main>
             <form action="/corona-maps/controller/back.php" method="POST">
             <input type="hidden" value="<?php echo $id; ?>" name="id">
+            <?php mediarNiveis(); ?>
             <div class="card">
                 <p class="label">Como está o nível de isolamento</p>
-                <p class="nivel"></p>
+                <p class="nivel"><?php echo $mediaNiIso; ?></p>
                 <?php if(isset($_SESSION['contribuir'])): ?>
-                <input type="number" class="form-control" name="cont1" value="0">
+                <input type="number" class="form-control" name="cont1" >
                 <?php endif; ?>
             </div>
             <div class="card">
                 <p class="label">Quão fácil é se isolar</p>
-                <p class="nivel"></p>
+                <p class="nivel"><?php echo $mediaFaIso; ?></p>
                 <?php if(isset($_SESSION['contribuir'])): ?>
-                <input type="number" class="form-control" name="cont2" value="0">
+                <input type="number" class="form-control" name="cont2" >
                 <?php endif; ?>
             </div>
             <div class="card">
                 <p class="label">Facilidade de solicitar serviços sem sair de casa</p>
-                <p class="nivel"></p>
+                <p class="nivel"><?php echo $mediaSoSer; ?></p>
                 <?php if(isset($_SESSION['contribuir'])): ?>
-                <input type="number" class="form-control" name="cont3" value="0">
+                <input type="number" class="form-control" name="cont3" >
                 <?php endif; ?>
             </div>
             <div class="btn-contribuir">
@@ -51,12 +53,15 @@
             <a href="../controller/back.php?contribuir=<?php echo "true"; ?> 
             " class="btn btn-info">Quero com minhas informações</a>
             <?php else: ?>
-            <a type="submit" class="btn btn-success" 
-            href="../controller/back.php?enviar=<?php echo "true"; ?>">Contribuir</a>
+            <button type="submit" class="btn btn-success" 
+           name="enviar">Contribuir</button>
             <?php endif; ?>
             </div>
             </form>
-            
+            <?php
+                mediarNiveis();
+                echo $quantidade;
+            ?>
             
         </main>
 
